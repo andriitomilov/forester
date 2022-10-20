@@ -3,7 +3,8 @@
   --color-secondary: #bbbbbb;
   --color-accent-link: #ff0000;
   --bg-color-primary: #000000;
-  --bg-color-hero-overlay:rgba(0,0,0,0.3);
+  --bg-color-hero-overlay: rgba(0, 0, 0, 0.3);
+  --bg-color-galery-box: rgba(0, 0, 0, 0.5);
 
   --f-family-primary: "Neucha", cursive;
   --f-family-secondary: "Russo One", sans-serif;
@@ -56,6 +57,8 @@ img {
 }
 .title {
   font-family: var(--f-family-secondary);
+  font-size: 30px;
+  line-height: 1.2;
 }
 
 /* ------------HEADER------------- */
@@ -133,7 +136,11 @@ img {
   max-width: 1600px;
   margin: 0 auto;
 
-  background-image: linear-gradient(var(--bg-color-hero-overlay), var(--bg-color-hero-overlay)), url(../images/bg-hero.jpg);
+  background-image: linear-gradient(
+      var(--bg-color-hero-overlay),
+      var(--bg-color-hero-overlay)
+    ),
+    url(../images/bg-hero.jpg);
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
@@ -200,4 +207,60 @@ img {
 
 .hero__item:hover {
   color: var(--color-primary);
+}
+
+/* -----------GALERY------------- */
+
+.galery {
+  text-align: center;
+}
+.galery__title {
+  margin-bottom: 30px;
+}
+.galery__text {
+  margin: 0 auto 50px;
+  max-width: 250px;
+}
+.galery__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.galery__item {
+  width: calc((100% - 60px) / 3);
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+.galery__link {
+  position: relative;
+  display: block;
+}
+
+.galery__img {
+    transition: transform var(--transition-time) var(--transition-function);
+}
+.galery__link:hover .galery__img {
+    transform: scale(1.05);
+}
+.galery__box {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: auto;
+  padding: 20px;
+
+  background-color: var(--bg-color-galery-box);
+}
+.galery__subtitle {
+    margin-bottom: 15px;
+
+  font-family: var(--f-family-secondary);
+  font-size: 24px;
+  line-height: 1.2;
+}
+.galery__content {
 }
