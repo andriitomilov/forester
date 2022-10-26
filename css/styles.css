@@ -323,7 +323,7 @@ img {
   transform: scale(1.1);
 }
 
-.desc__subtitle{
+.desc__subtitle {
   position: absolute;
   left: 0;
   top: 50%;
@@ -334,47 +334,47 @@ img {
 
 /* ------------FOOTER-------------- */
 .footer {
-    padding: 60px 0;
+  padding: 60px 0;
 }
 
 .social {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 .list {
 }
 .social__list {
 }
 .social__link {
-    display: block;
-    color: var(--color-primary);
+  display: block;
+  color: var(--color-primary);
 
-    transition: color var(--transition-time) var(--transition-function);
+  transition: color var(--transition-time) var(--transition-function);
 }
 .social-icon {
-    fill: currentColor;
+  fill: currentColor;
 }
 .social__link:hover {
-    color: var(--color-accent-link);
+  color: var(--color-accent-link);
 }
 
 /* ---------------SLIDER------------------- */
 .slider {
   position: relative;
 }
-.slick-list{
+.slick-list {
   overflow: hidden;
 }
-.slick-track{
+.slick-track {
   display: flex;
   gap: 30px;
 }
 
-.slick-slide{
+.slick-slide {
 }
 
-.slick-arrow{
+.slick-arrow {
   position: absolute;
   top: 50%;
 
@@ -383,16 +383,14 @@ img {
   font-size: 0;
 
   border: none;
-  
+
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-
-  
 }
 /* Стрелка влево */
-.slick-arrow.slick-prev{
+.slick-arrow.slick-prev {
   left: 0;
   z-index: 2;
 
@@ -400,8 +398,57 @@ img {
   transform: translate(-100%, -50%);
 }
 /* Стрелка вправо */
-.slick-arrow.slick-next{
+.slick-arrow.slick-next {
   right: 0;
   background-image: url(../images/293-next2.svg);
   transform: translate(100%, -50%);
+}
+
+/* -------------btn-scroll---------- */
+
+.btn-scroll {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  
+  width: 40px;
+  height: 40px;
+
+  text-align: center;
+
+  border: none;
+  border-radius: 4px;
+  
+  background-color: rgba(255, 0, 0, 0.218);
+  transition: background-color 250ms ease, opacity 250ms ease, visibility 250ms ease;
+
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.btn-scroll:hover,
+.btn-scroll:focus{
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+.btn-scroll__icon{
+  fill: #898989;
+
+  transition: fill 250ms ease;
+}
+
+.btn-scroll:hover .btn-scroll__icon,
+.btn-scroll:focus .btn-scroll__icon{
+  fill: #ffffff;
+}
+
+.show{
+  opacity: 1;
+  visibility: visible;
 }
