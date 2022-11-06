@@ -11,6 +11,11 @@
 
   --transition-time: 250ms;
   --transition-function: ease;
+
+  --desktop: 1200px;
+  --tablet-lg: 992px;
+  --tablet: 768px;
+  --mobile: 480px;
 }
 
 body {
@@ -159,9 +164,6 @@ img {
   line-height: 1.25;
 }
 .hero__list {
-  display: flex;
-  gap: 20px;
-
   border-bottom: 1px solid var(--color-primary);
 }
 .hero__item {
@@ -220,8 +222,6 @@ img {
   max-width: 250px;
 }
 .galery__item {
-  /* width: calc((100% - 60px) / 3); */
-
   border-radius: 10px;
 
   overflow: hidden;
@@ -330,6 +330,8 @@ img {
 
   width: 100%;
   text-align: center;
+
+  transform: translateY(-50%);
 }
 
 /* ------------FOOTER-------------- */
@@ -415,7 +417,7 @@ img {
   justify-content: center;
   align-items: center;
   margin: 20px;
-  
+
   width: 40px;
   height: 40px;
 
@@ -423,9 +425,10 @@ img {
 
   border: none;
   border-radius: 4px;
-  
+
   background-color: rgba(255, 0, 0, 0.218);
-  transition: background-color 250ms ease, opacity 250ms ease, visibility 250ms ease;
+  transition: background-color 250ms ease, opacity 250ms ease,
+    visibility 250ms ease;
 
   opacity: 0;
   visibility: hidden;
@@ -433,22 +436,194 @@ img {
 }
 
 .btn-scroll:hover,
-.btn-scroll:focus{
+.btn-scroll:focus {
   background-color: rgba(255, 0, 0, 0.7);
 }
 
-.btn-scroll__icon{
+.btn-scroll__icon {
   fill: #898989;
 
   transition: fill 250ms ease;
 }
 
 .btn-scroll:hover .btn-scroll__icon,
-.btn-scroll:focus .btn-scroll__icon{
+.btn-scroll:focus .btn-scroll__icon {
   fill: #ffffff;
 }
 
-.show{
+.show {
   opacity: 1;
   visibility: visible;
+}
+/* ---------------- mobile-menu-------------- */
+
+.btn-menu {
+  display: none;
+  padding: 0;
+  margin: 0;
+  color: var(--color-primary);
+  border: 0;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+.btn-menu svg {
+  fill: currentColor;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+
+  background-color: rgba(81, 12, 12, 0.9);
+
+  transform: translateX(-100%);
+  transition: transform var(--transition-time) var(--transition-function);
+}
+
+.menu.is-open {
+  transform: translateX(0);
+}
+
+.menu__list .menu__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.js-menu-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  transition: color var(--transition-time) var(--transition-function);
+}
+
+.js-menu-close:hover,
+.js-menu-close:focus {
+  color: var(--bg-color-primary);
+}
+.menu.is-open .js-menu-close {
+  display: block;
+}
+
+.menu__link {
+  display: flex;
+  padding: 10px 0;
+
+  transition: color var(--transition-time) var(--transition-function);
+}
+
+.menu__link:hover,
+.menu__link:focus {
+  color: var(--bg-color-primary);
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__list {
+    display: flex;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+  .section {
+    padding: 60px 0;
+  }
+  .hero__list {
+    flex-wrap: wrap;
+  }
+  .hero__item {
+    width: 100%;
+    gap: 80px;
+  }
+
+  .hero__list .hero__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .hero-section {
+    padding: 100px 0 60px;
+  }
+
+  .hero__title,
+  .hero__text {
+    margin-bottom: 60px;
+  }
+
+  .desc {
+    text-align: center;
+  }
+  .desc__title {
+    margin: 0 auto 60px;
+  }
+  .desc__link {
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+  .desc__wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-flex {
+    align-items: center;
+  }
+  .js-menu-open {
+    display: flex;
+  }
+  .menu.is-open ~ .js-menu-open {
+    display: none;
+  }
+  .nav__list {
+    display: none;
+  }
+  .galery__img {
+    width: 100%;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .hero__title {
+    text-align: center;
+  }
+  .hero__text {
+    text-align: center;
+    margin: 0 auto 60px;
+  }
+  .hero__item {
+    gap: 60px;
+  }
+  .desc__title {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .hero-section{
+    padding: 60px 0;
+  }
+  .hero__item{
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  .hero__list .hero__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .footer{
+    padding: 0 0 60px;
+  }
 }
