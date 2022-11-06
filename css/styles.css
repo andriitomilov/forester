@@ -413,7 +413,7 @@ img {
   bottom: 30px;
   right: 30px;
 
-  display: inline-flex;
+  display: none;
   justify-content: center;
   align-items: center;
   margin: 20px;
@@ -525,6 +525,10 @@ img {
   .hero__list {
     display: flex;
     gap: 20px;
+  }
+
+  .btn-scroll{
+    display: inline-flex;
   }
 }
 @media screen and (max-width: 1199px) {
