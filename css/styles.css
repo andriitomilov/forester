@@ -133,8 +133,6 @@ img {
 }
 
 /*  ----------HERO----------- */
-.hero {
-}
 .hero__overlay {
   max-width: 1600px;
   margin: 0 auto;
@@ -143,11 +141,34 @@ img {
       var(--bg-color-hero-overlay),
       var(--bg-color-hero-overlay)
     ),
-    url(../images/bg-hero.jpg);
+    url(../images/bg-hero.webp);
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
 }
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero__overlay {
+    background-image: linear-gradient(
+        var(--bg-color-hero-overlay),
+        var(--bg-color-hero-overlay)
+      ),
+      url(../images/bg-hero@2x.webp);
+  }
+}
+@media (min-device-pixel-ratio: 3),
+  (min-resolution: 288dpi),
+  (min-resolution: 3dppx) {
+  .hero__overlay {
+    background-image: linear-gradient(
+        var(--bg-color-hero-overlay),
+        var(--bg-color-hero-overlay)
+      ),
+      url(../images/bg-hero@3x.webp);
+  }
+}
+
 .hero-section {
   padding: 169px 0;
 }
@@ -255,12 +276,8 @@ img {
   font-size: 24px;
   line-height: 1.2;
 }
-.galery__content {
-}
 
 /* ----------------DESC-------------- */
-.desc {
-}
 .desc__overlay {
   max-width: 1600px;
   margin: 0 auto;
@@ -269,12 +286,33 @@ img {
       var(--bg-color-hero-overlay),
       var(--bg-color-hero-overlay)
     ),
-    url(../images/bg-desc.jpg);
+    url(../images/bg-desc.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .desc__overlay {
+    background-image: linear-gradient(
+        var(--bg-color-hero-overlay),
+        var(--bg-color-hero-overlay)
+      ),
+      url(../images/bg-desc@2x.webp);
+  }
+}
+@media (min-device-pixel-ratio: 3),
+  (min-resolution: 288dpi),
+  (min-resolution: 3dppx) {
+  .desc__overlay {
+    background-image: linear-gradient(
+        var(--bg-color-hero-overlay),
+        var(--bg-color-hero-overlay)
+      ),
+      url(../images/bg-desc@3x.webp);
+  }
+  }
 .desc__title {
   width: 480px;
   margin-bottom: 95px;
@@ -527,7 +565,7 @@ img {
     gap: 20px;
   }
 
-  .btn-scroll{
+  .btn-scroll {
     display: inline-flex;
   }
 }
@@ -616,10 +654,10 @@ img {
 }
 
 @media screen and (max-width: 479px) {
-  .hero-section{
+  .hero-section {
     padding: 60px 0;
   }
-  .hero__item{
+  .hero__item {
     flex-direction: column;
     gap: 20px;
     text-align: center;
@@ -627,7 +665,7 @@ img {
   .hero__list .hero__item:not(:last-child) {
     margin-bottom: 30px;
   }
-  .footer{
+  .footer {
     padding: 0 0 60px;
   }
 }

@@ -13,7 +13,7 @@
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.min.css">
 </head>
 
 <body>
@@ -117,8 +117,11 @@
                 <ul  class="list slider">
                     <li class="galery__item">
                         <a href="" class="galery__link">
-                            <img src="./images/galery-img-01.jpg" alt="гори" class="galery__img" width="370"
-                                height="500">
+                            <picture>
+                                <source srcset="./images/galery-img-01.webp 1x, ./images/galery-img-01@2x.webp 2x, ./images/galery-img-01@3x.webp 3x">
+                                <img src="./images/galery-img-01.webp" alt="гори" class="galery__img" width="370" height="500">
+                            </picture>
+                            
                             <div class="galery__box">
                                 <h3 class="galery__subtitle">Гуцульські Альпи</h3>
                                 <p class="galery__content">Містичні стежки Карпат</p>
@@ -128,8 +131,11 @@
 
                     <li class="galery__item">
                         <a href="" class="galery__link">
-                            <img src="./images/galery-img-02.jpg" alt="гори" class="galery__img" width="370"
-                                height="500">
+                            <picture>
+                                <source
+                                    srcset="./images/galery-img-02.webp 1x, ./images/galery-img-02@2x.webp 2x, ./images/galery-img-02@3x.webp 3x">
+                                <img src="./images/galery-img-02.webp" alt="гори" class="galery__img" width="370" height="500">
+                            </picture>
                             <div class="galery__box">
                                 <h3 class="galery__subtitle">Долина Диявола</h3>
                                 <p class="galery__content">Таємничий Гранд-Каньон</p>
@@ -139,8 +145,11 @@
 
                     <li class="galery__item">
                         <a href="" class="galery__link">
-                            <img src="./images/galery-img-03.jpg" alt="гори" class="galery__img" width="370"
-                                height="500">
+                            <picture>
+                                <source
+                                    srcset="./images/galery-img-03.webp 1x, ./images/galery-img-03@2x.webp 2x, ./images/galery-img-03@3x.webp 3x">
+                                <img src="./images/galery-img-03.webp" alt="гори" class="galery__img" width="370" height="500">
+                            </picture>
                             <div class="galery__box">
                                 <h3 class="galery__subtitle">Змієві вали</h3>
                                 <p class="galery__content">Подорож у стародавні часи</p>
@@ -150,8 +159,11 @@
 
                     <li class="galery__item">
                         <a href="" class="galery__link">
-                            <img src="./images/galery-img-04.jpg" alt="гори" class="galery__img" width="370"
-                                height="500">
+                            <picture>
+                                <source
+                                    srcset="./images/galery-img-04.webp 1x, ./images/galery-img-04@2x.webp 2x, ./images/galery-img-04@3x.webp 3x">
+                                <img src="./images/galery-img-04.webp" alt="гори" class="galery__img" width="370" height="500">
+                            </picture>
                             <div class="galery__box">
                                 <h3 class="galery__subtitle">Асканя-Нова</h3>
                                 <p class="galery__content">Південе сафарі</p>
@@ -161,8 +173,11 @@
 
                     <li class="galery__item">
                         <a href="" class="galery__link">
-                            <img src="./images/galery-img-05.jpg" alt="гори" class="galery__img" width="370"
-                                height="500">
+                            <picture>
+                                <source
+                                    srcset="./images/galery-img-05.webp 1x, ./images/galery-img-05@2x.webp 2x, ./images/galery-img-05@3x.webp 3x">
+                                <img src="./images/galery-img-05.webp" alt="гори" class="galery__img" width="370" height="500">
+                            </picture>
                             <div class="galery__box">
                                 <h3 class="galery__subtitle">Озеро Синевир</h3>
                                 <p class="galery__content">Дивовижне високогірне озеро</p>
@@ -197,11 +212,20 @@
                             </p>
                         </div>
                         <a href="https://www.youtube.com/watch?v=3IgeNZWhHOc" target="_blank" rel="noopener nofollow noreffer" class="desc__video">
-                            <img src="./images/desc-poster-01.jpg" alt="гори">
+                            <picture>
+                                <source srcset="./images/desc-poster-01.webp 1x, ./images/desc-poster-01@2x.webp 2x, ./images/desc-poster-01@3x.webp 3x" type="image/webp">
+                                <img src="./images/desc-poster-01.webp" alt="гори" width="300" height="242">
+                            </picture>
                             <h3 class="desc__subtitle">Долина Диявола: вид зверху</h3>
                         </a>
+
                         <a href="https://www.youtube.com/watch?v=IhcDSOGzpRs"  target="_blank" rel="noopener nofollow noreffer" class="desc__video">
-                            <img src="./images/desc-poster-02.jpg" alt="гори">
+                            <picture>
+                                <source
+                                    srcset="./images/desc-poster-02.webp 1x, ./images/desc-poster-02@2x.webp 2x, ./images/desc-poster-02@3x.webp 3x"
+                                    type="image/webp">
+                                <img src="./images/desc-poster-02.webp" alt="гори" width="300" height="242">
+                            </picture>
                             <h3 class="desc__subtitle">Гуцульскі гори: фоторепортаж</h3>
                         </a>
 
